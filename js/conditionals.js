@@ -35,6 +35,6 @@ switch(pizzaPreference) {
         alert("Just plain cheese? Okay...");
         break;
     default:
-        alert(pizzaPreference + " isn't my favorite, but let's order some ok!");
+        alert(pizzaPreference + " isn't my favorite, but let's order some!");
         break;
 }
