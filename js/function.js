@@ -1,14 +1,12 @@
 "use strict";
-<script>
-    function square(x){
-    return x*x
-}
 
 
-    square(4);
-    console.log(square(4));
 
-</script>
+var increment = function(x) {
+    return x + 1;
+};
+
+var two = increment(1);
 
 
 
@@ -19,12 +17,15 @@
  *
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
-
+*/
 function sayHello(name) {
+    var name = prompt("what is your name?");
     console.log("hello, "+ name);
+    alert("hello, Clarice!!");
 }
 
-sayHello(name: "Peter");
+
+//alert("your name is "+name);
 
 /**
  * TODO:
@@ -32,10 +33,11 @@ sayHello(name: "Peter");
  * Store the result of the function call in a variable named 'helloMessage'.
  *
  * console.log 'helloMessage' to check your work
-
+*/
 
 var helloMessage = sayHello(name: "Peter") ;
 console.log(helloMessage);
+
 
 /**
  * TODO:
@@ -118,10 +120,11 @@ alert (calculateTip(prompt("how much to tip"), promp(message: "how much is the b
  * > applyDiscount(originalPrice, discountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
- */
+
 
 
     function applyDiscount(price,discount){
         return console.log(price-(price*discount));
 }
 applyDiscount(price:45, discount:0.12);
+ */

@@ -63,6 +63,22 @@ switch(pizzaPreference) {
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+var favColor = prompt("what is your favorite color?").toLowerCase();
+
+
+function analyzeColor(favColor) {
+    if (favColor === "blue") {
+        alert(favColor + "nice color you got there");
+    } else if (favColor === "yellow") {
+        alert(favColor + " is way too yellow");
+    } else if (favColor === "red") {
+        alert(favColor + "looks too much like snozeberries");
+    } else {
+        alert("wrong choice buddy");
+    }
+}
+
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -76,6 +92,10 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+
+
+
+
 
 /**
  * TODO:
