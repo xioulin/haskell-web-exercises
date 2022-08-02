@@ -108,6 +108,17 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+var ucolor = prompt("fav color").toLowerCase();
+
+function analyzeColor(color){
+    switch(color){
+        case"blue";
+            return"blueberries are sweet"
+        case"red"
+            return"it's been a good year for the roses"
+        default:
+            return"I'm colorblind"
+    }}
 
 /* ########################################################################## */
 
@@ -160,3 +171,34 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+//1 make confirm  if user wants inputs number
+//2 assign confirm var boole
+//3 if conf var is true prompt user for number ,store to varia, wrap number
+//4 alert number as even
+// 5 add and alert number to a function
+//6 check if numb is Nan
+//7 if user input is NaN
+
+var isTrue = confirm("input a number");
+if (isTrue){
+    var aNumber = prompt("give number");
+    if (aNumber % 2 === 0){
+        alert("numb is even")
+    }else if(aNumber % 2 !== 0)
+        alert("number is odd")
+
+}
+    var newNum = aNumber+100;
+alert(`${aNumber}+100 = ${newNum}`)
+if(aNumber <0 ){
+    alert("is neg")
+}else if(aNumber>0){
+    alert("is pos")
+}else if(isNaN(aNumber)){
+    alert("is not a number!!")
+} else if (aNumber = 0){
+    alert("is zero!!!")
+    else(){
+        alert("is nothign!")
+    }
+}
