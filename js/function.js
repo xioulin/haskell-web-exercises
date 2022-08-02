@@ -1,12 +1,19 @@
 "use strict";
 
 
+// function multiply(a,b){
+//     var result = a*b;
+//     return result
+// }
+// console.log(multiply(15,7.5));
 
-var increment = function(x) {
-    return x + 1;
-};
+// function convertFahrenheitToCelsius(fahr){
+//         var Celsius = (5/9)*(fahr-32);
+//         return Celsius
+// }
+// console.log(convertFahrenheitToCelsius(82))
 
-var two = increment(1);
+
 
 
 
@@ -18,11 +25,23 @@ var two = increment(1);
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
 */
-function sayHello(name) {
-    var name = prompt("what is your name?");
-    console.log("hello, "+ name);
-    alert("hello, Clarice!!");
+
+function sayHello(name){
+        var name = prompt("what is your name");
+        return("hello, "+name)
 }
+console.log(name)
+
+
+
+
+
+
+// function sayHello(name) {
+//     var name = prompt("what is your name?");
+//     console.log("hello, "+ name);
+//     alert("hello, Clarice!!");
+// }
 
 
 //alert("your name is "+name);
@@ -35,8 +54,10 @@ function sayHello(name) {
  * console.log 'helloMessage' to check your work
 */
 
-var helloMessage = sayHello(name: "Peter") ;
-console.log(helloMessage);
+
+
+// var helloMessage = sayHello(name: "Peter") ;
+// console.log(helloMessage);
 
 
 /**
@@ -44,7 +65,7 @@ console.log(helloMessage);
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
-
+*/
 
 var myName = "Peter"
 sayHello(myName);
