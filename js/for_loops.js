@@ -9,3 +9,8 @@
 // })
 //
 
+// var num = prompt("enter number")
+//
+// for(var x=0, num ; x <= 10; x*num){
+//     console.log(x);
+// }

@@ -42,6 +42,17 @@ switch(pizzaPreference) {
 */
 "use strict";
 
+//
+// var pizzaPreference = prompt("What kind of pizza do you like?");
+//
+// if (pizzaPreference === "pineapple and hot sauce") {
+//     alert("What a coincidence, that's my favorite!");
+// } else if (pizzaPreference === "cheese") {
+//     alert("Just plain cheese? Okay...");
+// } else {
+//     alert(pizzaPreference + " isn't my favorite, but let's order some!");
+// }
+
 /* ########################################################################## */
 
 /**
@@ -63,20 +74,19 @@ switch(pizzaPreference) {
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-var favColor = prompt("what is your favorite color?").toLowerCase();
 
+var favColor = prompt("what is your favorite color").toLowerCase();
 
-function analyzeColor(favColor) {
     if (favColor === "blue") {
-        alert(favColor + "nice color you got there");
-    } else if (favColor === "yellow") {
-        alert(favColor + " is way too yellow");
-    } else if (favColor === "red") {
-        alert(favColor + "looks too much like snozeberries");
-    } else {
-        alert("wrong choice buddy");
+        prompt("why is the sky blue");
+        alert("because God loves the infantry");
+    } else if(favColor === "red"){
+        alert("roses are red")
+    } else{
+        alert(favColor+" is a bad choice");
     }
-}
+
+
 
 
 
@@ -85,8 +95,8 @@ function analyzeColor(favColor) {
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+ var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
@@ -108,17 +118,17 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-var ucolor = prompt("fav color").toLowerCase();
-
-function analyzeColor(color){
-    switch(color){
-        case"blue";
-            return"blueberries are sweet"
-        case"red"
-            return"it's been a good year for the roses"
-        default:
-            return"I'm colorblind"
-    }}
+// var ucolor = prompt("fav color").toLowerCase();
+//
+// function analyzeColor(color){
+//     switch(color){
+//         case"blue";
+//             return"blueberries are sweet"
+//         case"red"
+//             return"it's been a good year for the roses"
+//         default:
+//             return"I'm colorblind"
+//     }}
 
 /* ########################################################################## */
 
@@ -178,27 +188,27 @@ function analyzeColor(color){
 // 5 add and alert number to a function
 //6 check if numb is Nan
 //7 if user input is NaN
-
-var isTrue = confirm("input a number");
-if (isTrue){
-    var aNumber = prompt("give number");
-    if (aNumber % 2 === 0){
-        alert("numb is even")
-    }else if(aNumber % 2 !== 0)
-        alert("number is odd")
-
-}
-    var newNum = aNumber+100;
-alert(`${aNumber}+100 = ${newNum}`)
-if(aNumber <0 ){
-    alert("is neg")
-}else if(aNumber>0){
-    alert("is pos")
-}else if(isNaN(aNumber)){
-    alert("is not a number!!")
-} else if (aNumber = 0){
-    alert("is zero!!!")
-    else(){
-        alert("is nothign!")
-    }
-}
+//
+// var isTrue = confirm("input a number");
+// if (isTrue){
+//     var aNumber = prompt("give number");
+//     if (aNumber % 2 === 0){
+//         alert("numb is even")
+//     }else if(aNumber % 2 !== 0)
+//         alert("number is odd")
+//
+// }
+//     var newNum = aNumber+100;
+// alert(`${aNumber}+100 = ${newNum}`)
+// if(aNumber <0 ){
+//     alert("is neg")
+// }else if(aNumber>0){
+//     alert("is pos")
+// }else if(isNaN(aNumber)){
+//     alert("is not a number!!")
+// } else if (aNumber = 0){
+//     alert("is zero!!!")
+//     else(){
+//         alert("is nothign!")
+//     }
+// }
