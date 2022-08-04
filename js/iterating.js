@@ -62,18 +62,21 @@
 
     var names =['Dennis','Dee','Mac','Charlie'];
 
-       var returnsFirst =  function(){
-                console.log(names[0])
-                                    }
-                                        console.log(returnsFirst(names));
-    var returnsSecond =  function(){
-        console.log(names[1])
-    }
-    console.log(returnsSecond(names));
+    //    var returnsFirst =  function(){
+    //             console.log(names[0])
+    //                                 }
+    //                                     console.log(returnsFirst(names));
+    // var returnsSecond =  function(){
+    //     console.log(names[1])
+    // }
+    // console.log(returnsSecond(names));
+    //
+    // var returnsLast =  function(){
+    //     console.log(names[names.length-1])
+    // }
+    // console.log(returnsLast(names));
 
-    var returnsLast =  function(){
-        console.log(names[names.length-1])
-    }
-    console.log(returnsLast(names));
+    names.push("Frank");
+    console.log(names);
 
 })();
