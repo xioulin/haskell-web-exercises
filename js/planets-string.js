@@ -2,7 +2,7 @@
     "use strict";
 
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    // var planetsArray;
+
 
     /**
      * TODO:
@@ -25,8 +25,12 @@
      * string, and <li> tags around each planet.
      */
 
-    console.log(planetsString.replaceAll('|',"\n"));
+    console.log(planetsString.replaceAll('|',"<br>"));
 
-
+    //Bonus
+    planetsArray.push("</ul>");
+    planetsArray.unshift("<ul>");
+    var planetList = planetsArray.join("<li>");
+    console.log(planetList);
 
 })();
