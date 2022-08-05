@@ -88,15 +88,15 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    var person={
-        firstName: "Piotr",
-        lastName:  "Chomicki",
-
-    };
-        person.eat = function(){
-            alert("pierogies");
-        };
-        console.log(person.eat());
+    // var person={
+    //     firstName: "Piotr",
+    //     lastName:  "Chomicki",
+    //
+    // };
+    //     person.eat = function(){
+    //         alert("pierogies");
+    //     };
+    //     console.log(person.eat());
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
