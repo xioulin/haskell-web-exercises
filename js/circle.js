@@ -25,35 +25,39 @@
     var circle = {
         radius: 3,
 
-        getArea: function (radius) {
-            // TODO: complete this method
-            // hint: area = pi * radius^2
+        getArea: function () {
 
-            return; // TODO: return the proper value
+            return (circle.radius*circle.radius)*Math.PI;
         },
 
         logInfo: function (doRounding) {
-            // TODO: complete this method.
 
-            // If doRounding is true, round the result to the nearest integer.
-            // Otherwise, output the complete value
+            if(doRounding) {
+                return Math.round(circle.getArea());
+                console.log("Area of a circle with radius: " + circle.radius + ", is: ");
+            }else{
+                return circle.getArea();
+                console.log("Area of a circle with radius: " + circle.radius + ", is: ");
+            }// TODO: complete this method.
 
-            console.log("Area of a circle with radius: " + this.radius + ", is: ");
+
+
         }
     };
-
-    // log info about the circle
+   //  console.log(circle.getArea());
+   //  //log info about the circle
     console.log("Raw circle information");
-    circle.logInfo(false);
-    console.log("Circle information rounded to the nearest whole number");
-    circle.logInfo(true);
+     console.log(circle.logInfo(false));
+   console.log("Circle information rounded to the nearest whole number");
+   console.log(circle.logInfo(true));
 
-    console.log("=======================================================");
-    // TODO: Change the radius of the circle to 5.
+   console.log("=======================================================");
+   // TODO: Change the radius of the circle to 5.
+    circle.radius = 5
+   //log info about the circle
+    console.log("Raw circle information for radius "+circle.radius+" is ");
+    console.log(circle.logInfo(false));
 
-    // log info about the circle
-    console.log("Raw circle information");
-    circle.logInfo(false);
     console.log("Circle information rounded to the nearest whole number");
-    circle.logInfo(true);
+    console.log(circle.logInfo(true));
 })();
