@@ -253,5 +253,28 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    var books = [];
+    function createBook(title,author){
+        var book = {
+            title: title,
+            author: author
+        };
+        books.push(book);
+        return book;
+    }
+    console.log(books);
+    console.log(createBook("My Book","myAuthor"));
+    console.log(books);
 
+    function showBookInfo(book){
+        console.log(`Book # ${index+1}`);
+        console.log(`Title: ${book.title}`);
+        console.log(`Author: ${book.author.firstName}${book.author.lastName}`);
+        console.log("---")
+    }
+    books.forEach(function (book,index){
+
+        showBookInfo(book);
+    })
+    console.log(showBookInfo(book));
 })();
