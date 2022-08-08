@@ -88,14 +88,17 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    var person={
-        firstName: "Piotr",
-        lastName:  "Chomicki",
-    };
-        person.eat = function(){
-            alert("pierogies");
-        };
-        console.log(person.eat());
+    // var person={
+    //     firstName: "Piotr",
+    //     lastName:  "Chomicki"
+    // }
+    //     console.log("My name is "+person.firstName);
+    //     console.log("My family name is " +person.lastName);
+
+        // person.eat = function(){
+        //     alert("pierogies");
+        // };
+        // console.log(person.eat());
 
         /**
      * TODO:
@@ -106,6 +109,11 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    // person.sayHello = function(){
+    //     return ("Hello from ")+person.firstName+" "+person.lastName+"!";
+    //     }
+    // console.log(person.sayHello());
 
 
     /** TODO:
@@ -122,11 +130,31 @@
      * and console.log the relevant messages for each person
      */
 
+        // 1. HEB offers discount for purchases over $200.
+        //2. If payer buys more than $200 worth, a 12% discount applies to the total purchse
+
     // var shoppers = [
     //     {name: 'Cameron', amount: 180},
     //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
+    //     {name: 'George', amount: 320},
+    //
     // ];
+    //need to call on each individual shopper and their purchase amount.
+    // need to apply a conditional where 12% is applied to amounts over $200
+
+
+    // shoppers.forEach(function(shopper){
+    //     console.log(shopper.amount);
+    //     if(shopper.amount>200){
+    //         shopper.amount -= shopper.amount*.12
+    //
+    //     }
+    //
+    //     var discountAmount = shopper.amount*.12;
+    //
+    //     console.log(shopper.name + " saved $"+discountAmount.toFixed(2)+" and "+shopper.name+"'s new total is "+shopper.amount+"!");
+    // })
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -140,6 +168,49 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+            title:"The Grapes of Wrath",
+            author:{
+                firstName: "John",
+                lastName: "Steinbeck"
+            },
+        },
+        {
+            title:"The Great Gatsby",
+            author:{
+                firstName:"F.Scott",
+                lastName: "Fitzgerald"
+            }
+        },
+
+        {
+            title:"Pride and Prejudice",
+            author:{
+                firstName:"Jane",
+                lastName: "Austen"
+            }
+        },
+        {
+            title:"Moby Dick",
+            author:{
+                firstName:"Hermann",
+                lastName: "Melville"
+            }
+        },
+        {
+            title:"The Shining",
+            author:{
+                firstName:"Stephen",
+                lastName: "King"
+            }
+        }
+    ];
+    //
+    // console.log(books[4].title);
+
+
 
     /**
      * TODO:
@@ -165,6 +236,12 @@
      *      ---
      *      ...
      */
+
+    books.forEach(function(book,index){
+        console.log(`Book # ${index+1}`);
+        console.log(`Title: ${book.title}`);
+        console.log(`Author: ${book.author.firstName}${book.author.lastName}`);
+    })
 
     /**
      * Bonus:
