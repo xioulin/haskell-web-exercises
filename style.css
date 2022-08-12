@@ -3,6 +3,15 @@ this file is named "site.css" and is in a directory named "css"
 */
 
 .fancy-header {
-    color: purple;
+    color: blue; /* single line comment */
     text-decoration: underline;
+}
+
+h1.fancy-header {
+    color: blue;
+}
+
+
+#myContainer h1{
+    text-align: center
 }
