@@ -18,12 +18,7 @@ h2, h3 {
     margin: 0 auto;
     width: 80%;
 }
-.greenstuffs{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
+
 #box4{
     align-self: flex-start;
 
@@ -51,6 +46,10 @@ h2, h3 {
 
 section {
     /* enter needed declarations here */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 section:nth-of-type(1) {
@@ -64,6 +63,7 @@ section:nth-of-type(1) div:last-child {
 
 .purplehaze{
     display: flex;
+    width: 100%;
 }
 .purple-box {
     background: fuchsia;
@@ -71,7 +71,7 @@ section:nth-of-type(1) div:last-child {
     height: 1em;
 }
 #box44{
-    flex-grow: 0.65;
+    flex-grow: 0.75;
 }
 #box5{
     flex-grow: 0.25;
