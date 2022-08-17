@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Basics Examples</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 1em;
+      font-weight: bold;
+
+    }
+
+    body {
+      font-family: AppleSystemUIFont;
+    }
+
+    .flex-container {
+      width: 95%;
+      height: 300px;
+      border: 3px solid goldenrod;
+      display: flex;
+      flex-direction: row;
+      /*justify-content: space-evenly;*/
+      align-items: baseline;
+      flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+    }
+    .flex-item {
+      /*background: #BFD45D;*/
+      border: 2px solid #F9EFD6;
+      padding: 1em;
+      background-color: navy;
+      color: white;
+    }
+    #box1{
+      height: 45px;
+    }
+    #box2{
+      height: 85px;
+    }
+    #box3{
+      height: 125px;
+      width: 65px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="flex-container">
+  <div class="flex-item" id="box1">Item 1</div>
+  <div class="flex-item" id="box2">Item 2</div>
+  <div class="flex-item" id="box3">Item 3</div>
+  <div class="flex-item" id="box4">Item 4</div>
+  <div class="flex-item" id="box5">Item 5</div>
+  <div class="flex-item" id="box6">Item 6</div>
+  <div class="flex-item" id="box7">Item 7</div>
+  <div class="flex-item" id="box8">Item 8</div>
+  <div class="flex-item" id="box9">Item 9</div>
+  <div class="flex-item" id="box11">Item10</div>
+  <div class="flex-item" id="box12">Item11</div>
+
+
+</div>
+
+</body>
+</html>
