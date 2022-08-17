@@ -53,11 +53,55 @@ a {
 }
 .profile {
     background: var(--light-bg);
+    height: 80px;
 }
+
 .profile-image{
     position: absolute;
-    height: 80px;
+    height: 220px;
     z-index: 1000;
+    float: top;
+}
+.profile-form{
+    height: 80px;
+    float: right;
+    line-height: 80px;
+}
+.profile-entry{
+    margin: .5em;
+}
+.profile-details{
+    width: 25%;
+    margin: 0 0.5em;
+    float: left;
+}
+.timeline{
+    width: 50%;
+    margin: 0 0.5em;
+    float: left;
+}
+.who-to-follow{
+    width: calc(25%;
+    margin: 0 0.5em;
+    float: left;
+}
+.continer{
+    margin: 2em;
+}
+.media{
+    width: 100%;
+    background-color: var(--main-link-color);
+    border-bottom: 1px solid var(--seperator-color);
+    padding: .5em;
+
+}
+.media-image{
+    width: 50%;
+    margin: 1.33em;
+    float: left;
+    margin-top: 1.33em;
+
+
 }
 .btn {
     border: 1px solid var(--main-link-color);
