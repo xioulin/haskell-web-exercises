@@ -1,0 +1,22 @@
+.div{
+    display: flex;
+}
+ /*screen sizes 500px and up */
+@media screen and (min-width:500px) {
+    div{
+        flex-direction: row;
+    }
+    /*selector {*/
+    /*    property: value;*/
+    /*}*/
+    p{
+        color:red;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    div{
+        flex-direction: column;
+    }
+}
