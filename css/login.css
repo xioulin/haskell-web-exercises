@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+
 }
 
 body, html {
@@ -11,8 +12,9 @@ body, html {
 }
 
 form {
-  border: 1px solid black;
+    border: 1px solid black;
     padding: 1em;
+
 /* solid, black border of 1px thickness */
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
@@ -25,7 +27,7 @@ fieldset {
 
     padding: 1em;
     border: 0;
-    background-color: white;
+    background-color: gray
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
@@ -33,7 +35,7 @@ fieldset {
 
 .width-80 {
     margin-left: auto;
-    margin-rght: auto;
+    margin-right: auto;
     /* The element with this class should be 80% of the width and it must be centered */
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
 }

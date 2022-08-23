@@ -1,0 +1,32 @@
+/*
+this file is named "site.css" and is in a directory named "css"
+*/
+body{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: cursive;
+}
+
+.fancy-header {
+    color: white;
+    font-family: SansSerif;
+
+    text-decoration: underline;
+    text-align: center;
+    background-color:navy;
+    opacity: 25%;
+}
+
+/* make element text color red */
+#myContainer {
+    color: darkmagenta;
+}
+
+h1{
+    font-size: 95px;
+}
+
+.myContainer h1{
+    font-size:12px;
+}
