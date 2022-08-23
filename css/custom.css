@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+
+}
+.container-fluid{
+    white-space: nowrap;
+    vertical-align: center;
+}
+.p-3{
+    opacity:55%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.jumbotron {
+    background-image: url("../images/pizza.png");
+    height: 346px;
+    background-size: cover;
+    vertical-align: center;
+}
+h1 {
+    /*width: 100%;*/
+    /*text-align: center;*/
+    /*align-items: center;*/
+    background-color:rgba(0, 0, 0, 0.4);
+}
+.d-lg-block{
+    image-opacity: 0.5;
+}
+
+#botox{
+    float: right;
+    text-align: right;
+    margin-left: 700px;
+}
