@@ -28,7 +28,7 @@ body {
 .message-success{
     background-color: lightgreen;
     text-align: left;
-
+    color: hotpink;
 }
 .message-warning{
     background-color: yellow;
@@ -37,4 +37,5 @@ body {
 .message-error{
     background-color: palevioletred;
     text-align: left;
+    color: pink;
 }
