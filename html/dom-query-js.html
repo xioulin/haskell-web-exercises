@@ -29,7 +29,7 @@
 <button id="btn1">Click to Change Heading</button>
 <button id="btn2">Click to make subheader blue</button>
 <button id="btn3">Make Fonts Turn Gray</button>
-<button id="btn4">Remove Event Listener</button>
+<button id="btn4">Change last subparagraph</button>
 
 <script>
     'use strict';
@@ -59,6 +59,12 @@
     var btn3 = document.getElementById('btn3');
         btn3.addEventListener('click',fiftyShades);
 
+    var changePar = function(event){
+        var subParagraphs = document.getElementsByClassName('sub-paragraph');
+        subParagraphs[0].innerHTML = "Mission Accomplished";
+    }
+    var btn4 = document.getElementById('btn4');
+    btn4.addEventListener('click',changePar);
     // var remover = function (event) {
     //     // remove event listener from btn1
     //     btn1.removeEventListener('click', listener);
