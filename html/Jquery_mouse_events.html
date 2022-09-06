@@ -9,20 +9,50 @@
 </head>
 <body>
 
-<h1 id="'my-sharona">This is my header</h1>
+<h1 id="my-sharona">This is my header</h1>
 <p>this is my content</p>
 <button id='codeup' type="button">Click Here to Claim your Prize!!</button>
 
-
-
+<ol>
+    <li>Number 1</li>
+    <li>Number 2</li>
+    <li>Number 3</li>
+    <li>Number 4</li>
+</ol>
 
 
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
         crossorigin="anonymous"></script>
 <script>
-    $('#codeup').dblclick(function() {
+    $('#codeup').dblclick(function () {
         alert('You win nothing, good day sir!');
     });
+
+    $('#codeup').hover(
+        function () {
+            $("p").css('background-color', '#FF0');
+        },
+        function () {
+            $('p').css('background-color', '#FFF');
+        }
+    );
+
+    $("#my-sharona").click(function () {
+        $(this).css("background-color", "red");
+    });
+
+    $('p').dblclick(function () {
+        $(this).css('font-size', '18px');
+    })
+
+    $('li').hover(
+        function () {
+            $('li').css('color', 'red');
+        },
+        function () {
+            $('li').css('color', 'black');
+        });
+
 </script>
 </body>
 </html>
