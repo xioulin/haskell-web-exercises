@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>First Mapbox Map</title>
+
+
   <!-- Mapbox CSS -->
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
   <!-- Custom CSS -->
@@ -17,6 +19,7 @@
 <body>
 
 <h1>My First Mapbox Map!</h1>
+<button type="'button" id="btn1">CLick here for zoom level 5</button>
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
 <!-- Mapbox JS -->
@@ -49,15 +52,32 @@
     center: [21.21, 52.14]
   });
 
-  // the  geocode method from mapbox-geocoder-utils.js
-  geocode("tilted kilt pub, killeen, TX 76543", MAPBOX_TOKEN).then(function(result) {
+
+  geocode("tilted kilt, killeen, TX 76543", MAPBOX_TOKEN).then(function(result) {
       console.log(result);
       map.setCenter(result);
-      map.setZoom(20);
+      map.setZoom(13);
+    var marker = new mapboxgl.Marker()
+        .setLngLat(result)
+        .addTo(map)
+    var popup = new mapboxgl.Popup()
+        .setLngLat(result)
+        .setHTML("<p>Tilted Kilt</p>")
+        .addTo(map)
   });
-  // reverseGeocode({lng: 21.2131, lat: 52.1476}, MAPBOX_TOKEN).then(function(results) {
-  //   // logs the address for The Alamo
-  //   console.log(results);
+
+ map.on('click', (e) => {
+    map.setZoom(5);
+  });
+  map.on('dblclick', (e) => {
+   map.setZoom(10);
+  });
+
+  .foreach
+  // reverseGeocode({lng: -97.71765, lat: 31.09288}, MAPBOX_TOKEN).then(function(result) {
+  //   console.log(result);
+  //   map.setCenter([-97.71765, 31.09288]);
+  //   map.setZoom(15);
   // });
 
 </script>

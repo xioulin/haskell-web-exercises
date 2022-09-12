@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="../js/keys.js"></script>
+<!-- Custom JS -->
+<script src="../js/mapbox-geocoder-utils.js"></script>
+
+<script>
+
+
+    mapboxgl.accessToken = MAPBOX_TOKEN
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [21.212, 52.1477], // starting position [lng, lat]
+        zoom: 13, // starting zoom
+        projection: 'globe' // display the map as a 3D globe
+    });
+
+    // var marker = new mapboxgl.Marker()
+    //     .setLngLat([21.212, 52.147])
+    //     .addTo(map);
+    // var marker2 = new mapboxgl.Marker()
+    //     .setLngLat([21.21, 52.15])
+    //     .addTo(map);
+    //
+    //
+    // var popup = new mapboxgl.Popup()
+    //     .setLngLat([21.212, 52.147])
+    //     .setHTML("<p>Michalin</p><a href='https://www.jozefow.pl/pl'>www.michalin.pl</a> ")
+    //     .addTo(map)
+
+    // setTimeout(function(){
+    //     map.setCenter([21.212, 52.1477]);
+    //     map.setZoom(6);
+    //     map.setStyle('mapbox://styles/mapbox/streets-v11')
+    // })
+
+    //
+    // console.log(map.getCenter());
+    // // map.on('style.load', () => {
+    // //     map.setFog({}); // Set the default atmosphere style
+    // // });
+
+
+    // mapboxgl.accessToken = MAPBOX_TOKEN;
+    // var map = new mapboxgl.Map({
+    //     container: 'map',
+    //     style: 'mapbox://styles/mapbox/streets-v9',
+    //     zoom: 10,
+    //     center: [21.21, 52.14]
+    // });
+
+    // the  geocode method from mapbox-geocoder-utils.js
+    // geocode("whitefish,MT", MAPBOX_TOKEN).then(function(result) {
+    //     console.log(result);
+    //     map.setCenter(result);
+    //     map.setZoom(13);
+    // });
+
+
+    reverseGeocode({lng: -157.8060, lat: 21.2620}, MAPBOX_TOKEN).then(function(results) {
+        // logs the address for The Alamo
+        console.log(results);
+    });
+
+    //  geocode('results', MAPBOX_TOKEN).then(function(result) {
+    //     console.log(result);
+    //     map.setCenter(result);
+    //     map.setZoom(13);
+    // });
+
+</script>
+</body>
+</html>
