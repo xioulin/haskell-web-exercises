@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>First Mapbox Map</title>
+    <title>Lincoln Memorial</title>
     <!-- Mapbox CSS -->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <!-- Custom CSS -->
@@ -32,29 +32,49 @@
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [21.212, 52.1477], // starting position [lng, lat]
+        center: [-77.05,38.889], // starting position [lng, lat]
         zoom: 13, // starting zoom
         projection: 'globe' // display the map as a 3D globe
     });
 
-    var marker = new mapboxgl.Marker()
-        .setLngLat([21.212, 52.147])
+    var marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([-77.05,38.889])
         .addTo(map);
-    var marker2 = new mapboxgl.Marker()
-        .setLngLat([21.21, 52.15])
+    // var marker2 = new mapboxgl.Marker()
+    //     .setLngLat([21.21, 52.15])
+    //     .addTo(map);
+
+    var popup;
+    popup = new mapboxgl.Popup()
+        .setLngLat([-77.05, 38.889])
+        .setHTML("<p>Lincoln's Memorial</p><a href='https://www.nps.gov/linc/index.htm'>click for website</a> ")
         .addTo(map);
 
+    // function onDragEnd() {
+    //     var lngLat = marker.getLngLat();
+    //     coordinates.style.display = 'block';
+    //     coordinates.innerHTML =
+    //         'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+    // }
+    //
+    // marker.on('dragend', onDragEnd);
 
-    var popup = new mapboxgl.Popup()
-        .setLngLat([21.212, 52.147])
-        .setHTML("<p>Michalin</p><a href='https://www.jozefow.pl/pl'>www.michalin.pl</a> ")
-        .addTo(map)
+    marker.on('dragend', function() {
+        let coordinates = marker.getLngLat();
+        console.log(coordinates);
+        console.log(coordinates.lat);
+        console.log(coordinates.lng);
+        $('#coords').html('Latitude: ' + coordinates.lat + '<br> Longitude: ' + coordinates.lng);
+    });
 
-        // setTimeout(function(){
-        //     map.setCenter([21.212, 52.1477]);
-        //     map.setZoom(6);
-        //     map.setStyle('mapbox://styles/mapbox/streets-v11')
-        // })
+
+    // setTimeout(function(){
+    //     map.setCenter([21.212, 52.1477]);
+    //     map.setZoom(6);
+    //     map.setStyle('mapbox://styles/mapbox/streets-v11')
+    // })
 
     //
     // console.log(map.getCenter());
