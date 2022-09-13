@@ -23,13 +23,14 @@
        displayed in the paragraph and the text input value should be reset to an empty string.
    */
 
-  $('#text-btn').on('click', function(){
+  $('#text-btn').on('click', function() {
+    // store the value of the text input in a variable
     let text = $('#text-input').val();
-    $('#text').text(text);
-    text = text.text('');
-  })
-
-
+    // set the inner text of the paragraph to the value of the text variable
+    $('#text').text('<em>Text</em>');
+    // clear out the value of the text input
+    $('#text-input').val('');
+  });
 
 
 

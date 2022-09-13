@@ -73,7 +73,24 @@
    map.setZoom(10);
   });
 
-  .foreach
+ var restaurants = [
+   {
+     name: 'ihop'
+     address: 'killeen, tx, 76543'
+   }
+   {
+     name: 'dennys'
+     address: 'killeen, tx, 76543'
+   }
+   {
+     name: 'pizza hut'
+     address: 'killeen, tx, 76543'
+   }
+ ];
+
+ restaurants.forEach(geocode(name))
+
+
   // reverseGeocode({lng: -97.71765, lat: 31.09288}, MAPBOX_TOKEN).then(function(result) {
   //   console.log(result);
   //   map.setCenter([-97.71765, 31.09288]);
