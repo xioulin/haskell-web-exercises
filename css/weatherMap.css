@@ -1,0 +1,42 @@
+header {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 150px
+}
+.w3-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.w3-card-blue{
+    margin:50px;
+    border: 2px solid black;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+    font-size: 25px;
+}
+.w3-card-red{
+             margin-left:350px;
+             margin-right:350px;
+             border: 2px solid black;
+             padding-bottom: 15px;
+             padding-top: 15px;
+             padding-left: 15px;
+             padding-right: 15px;
+             border-radius: 15px;
+             font-size: 25px;
+         }
+#cloud-coverage{
+    text-transform: capitalize;
+}

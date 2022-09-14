@@ -1,22 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Pogoda Warszawska</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="../css/weatherMap.css">
 </head>
 <body>
+<header>Weather For You!!</header>
+<!--<img src="../images/syrenka.jpeg">--!>
+<hr>
+<header class="w3-card-red">Current Weather Conditions</header>
+<div class="w3-card">
+  <header class="w3-card-blue" >
+    <table>
+      <tr id="date"></tr>
+      <tr id="temp"></tr>
+      <tr id="cloud-coverage"></tr>
+      <tr id="precip"></tr>
+      <tr id="uv-index"></tr>
+    </table>
+  </header>
+  <header class="w3-card-blue" ></header>
+  <header class="w3-card-blue" ></header>
+  <header class="w3-card-blue" ></header>
+  <header class="w3-card-blue" ></header>
+
+</div>
 
 
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
 <script src="../.idea/keys.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+
+ $.get("http://api.openweathermap.org/data/2.5/forecast", {
+   APPID: MAC_WEATHERAPI,
+   q: "Warsaw, PL",
+   units:  'metric'
+ }).done(function(data) {
+   console.log('current weather', data);
+   // $('#textbox').text(data.current);
+   var newDate = data.list[0].dt_txt
+   var newDate1= new Date(newDate.replace(/-/g,"/"));
+   $('#date').text(newDate1.toDateString());
+   var temp = data.list[0].main.temp.toPrecision(3);
+   $('#temp').text("Temperature: "+ temp+'°C');
+   var cloudy = data.list[0].weather[0].description
+   $('#cloud-coverage').text(cloudy);
+
+   console.log(data.list[31].rain);
 
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-$.get("http://api.openweathermap.org/data/2.5/weather", {
-APPID: OPEN_WEATHER,
-q:     "San Antonio, US"
-});
+   // $('#temp').text('The Temperature is: '+data.)
+   // $('.w3-card-blue').text("The country is "+ data.city.country)
+   // $('.w3-card-blue').text("The country is "+ data.city.country)
+   // $('.w3-card-blue').text("The country is "+ data.city.country)
+
+
+ });
+
+
+
+</script>
 </body>
 </html>
