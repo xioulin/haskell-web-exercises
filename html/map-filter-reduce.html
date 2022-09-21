@@ -9,6 +9,114 @@
 </head>
 <body>
 
+
+
+
 <script src="../js/map-filter-reduce.js"></script>
+
+<script>
+
+    // const arrayPractice = [3, 24, 'string', 34];
+    //
+    // console.log(arrayPractice);
+    //
+    // console.log(Array.isArray(arrayPractice)); //checking if arrayPractice is an array
+    //
+    // const messingAroundArray = arrayPractice.map(x => x+',');
+    // console.log(messingAroundArray);
+    //
+    // console.log(arrayPractice.length);
+    //
+    //
+    //
+    // const salesPeople = [
+    //     {name: 'Jim Halpert', sales: 100},
+    //     {name: 'Dwight Schrute', sales: 50},
+    //     {name: 'Andy Bernard', sales: 150},
+    // ];
+
+    // const totalSales = salesPeople.reduce((total, person) => {
+    //     return total + person.sales;
+    // }, 0);
+    //
+    // console.log(totalSales); //returns 300
+    // function countWords(sentence) {
+    //     const words = sentence.split(' '); // transform a sentence into an array of words
+    //     const wordCountObject = words.reduce((wordCounts, word) => {
+    //         if (typeof wordCounts[word] === 'undefined') {
+    //             // if the word is not yet present in our object, set it's value to 1
+    //             wordCounts[word] = 1;
+    //         } else {
+    //             // otherwise increment the existing count
+    //             wordCounts[word] += 1;
+    //         }
+    //         return wordCounts;
+    //     }, {}); // start with an empty object
+    //     return wordCountObject;
+    // }
+    // const lambMary = countWords('Mary had a little lamb little lamb little lamb');
+    // console.log(lambMary);
+    // {Mary: 1, had: 1, a: 1, little: 3, lamb: 3}
+
+    //Mapping Practice: transform elements of array
+
+    // const numbersWeird = [1,2,3,4,5,6,7,9,13,20];
+    //
+    // const quadrupler = numbersWeird.map(x => x**4)
+    // console.log(numbersWeird,quadrupler);
+    //
+    // const evensRemover = numbersWeird.filter(x => x%2 !== 0)
+    // console.log(evensRemover); //removes all even numbers from array of numbersWeird
+
+    // const names = ['Jenna', 'Ron', 'Dorian Yates', 'Ronnie Coleman', 'Jack Daniels', 'Horace Grant', 'Johnny'];
+    // const surnames = names.filter(function(name){
+    //     return name.length < 5;
+    // })
+    // console.log(surnames);
+    // the const names function is just practicing on filtering out array items based on string length
+
+    // var minThreeL = users.filter(function(n) {
+    //     return (n ==> 3);
+    // });
+    // console.log(minThreeL); // [2, 4, 6, 8, 10]
+
+    // let ranks = [1,2,3,4,5];
+    // for (let i = 0; i < ranks.length; ++i) {
+    //     console.log(ranks[i]**2);
+    // }
+    //
+    // const evenRanks = Array.from(ranks,x => x**5); //this takes the ranks array and creates a new one with all elements in the array multiplied ot the exponent of 5
+    // console.log(evenRanks);
+
+
+
+
+
+
+    // Create a file named map-filter-reduce.js in your js directory and copy the users data below into it.
+    //     Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
+    const minThree = users.filter(user => user.languages.length >= 3);
+    console.log(minThree);
+    //     Use .map to create an array of strings where each element is a user's email address
+    const userEmail = Array.from(users, userx => userx.email)
+    console.log(userEmail);
+    // Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+    const totalYrsExp = users.reduce((x,y)=> {
+        return x + y.yearsOfExperience;
+    },0)
+    console.log(totalYrsExp)
+    //     Use .reduce to get the longest email from the list of users.
+
+!
+    //     Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+    //
+    // console.log(users[1].name);
+    //
+    // const usersName = users.filter(function(i){
+    //
+    // })
+
+
+</script>
 </body>
 </html>
