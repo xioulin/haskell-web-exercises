@@ -1,23 +1,18 @@
 * {
-    padding: 0;
-    margin: 0;
-
+    padding: 23px;
+    margin: 23px;
 }
 
 body, html {
-    height: 100%;
-    width: 100%;
+    height: 10%;
+    width: 10%;
     background-color: #cbffcd;
     font-family: Arial, Ubuntu, sans-serif;
 }
-
 form {
-    border: 1px solid black;
-    padding: 1em;
-
-/* solid, black border of 1px thickness */
-    /* This form should be separated from other elements by 1em */
-    /* There must be 1em between the content and the border of this element */
+    border: 4px solid black;
+    padding: 4em;
+    margin: 1px;
 }
 
 fieldset {
@@ -27,7 +22,7 @@ fieldset {
 
     padding: 1em;
     border: 0;
-    background-color: gray
+    background-color: pink;
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
@@ -48,7 +43,8 @@ fieldset {
 }
 
 .form-label {
-    font-weight: bold
+    font-weight: bold;
+
     /* The text of a label must be bold */
 }
 
@@ -58,14 +54,15 @@ fieldset {
 }
 
 .btn {
-    padding: 8px;
-    color: white;
+    padding: 40px;
+    color: blue;
     font-weight: bold;
     /* There must be a separation of 8px between the text and the border of this element */
     /* The text color of this element should be white and bold */
     /* The border of this element should be 1px, and its color should be light grey */
-    background-color: #0fb784;
-    border: 1px solid lightgray;
+    background-color: blueviolet;
+    border: 27px solid hotpink;
+    margin: 10px;
 }
 
 .form-control {

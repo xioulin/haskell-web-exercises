@@ -6,12 +6,158 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Promises</title>
+   <style>
+       .loader {
+           position: fixed;
+           left: 0px;
+           top: 0px;
+           width: 100%;
+           height: 100%;
+           z-index: 9999;
+           background: url('../images/loadingGif.webp') 50% 50% no-repeat rgb(249, 249, 249);
+       }
+   </style>
+
 </head>
 <body>
-<script src="../js/promises.js"></script>
 
+<div class="loader"></div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--<script type="text/javascript">-->
 <script>
+    $(window).load(function() {
+        $(".loader").fadeOut(4500);
+    })
+    // setTimeout(()=>{
+    //     console.log('wait 10 seconds for next message')
+    //     setTimeout(()=>{
+    //         console.log('you waited, good job')
+    //     },10000)
+    // }, 1000);
 
+    //
+    // fetch('https://api.github.com/users')
+    //     .then(response => console.log(response))
+    //     .catch(error => console.error(error));
+
+
+    // // define myPromise as fetch request
+    // const myPromise = fetch('https://api.github.com/users');
+    // //callback on myPromise to generate succesful respones in .then or .catch for failure
+    // // myPromise.then(response => console.log(response));
+    // // myPromise.catch(error => console.error(error));
+    // console.log(myPromise);
+
+    // const githubPromise = fetch('https://api.github.com/repositories');
+    // const bitbucketPromise = fetch('https://api.bitbucket.org/2.0/repositories');
+
+    // Promise.all([githubPromise, bitbucketPromise])
+    //     .then(function(data) {
+    //         // here data is an array of the resolved values from each promise
+    //         // we can now do something with both pieces of data
+    //         console.log(myPromise)
+    //     })
+    //     .catch(function(error) {
+    //         // handle errors
+    //     });
+
+    //
+    // Promise.resolve('one').then((one) => {
+    //     console.log(one);
+    //     return 'two';
+    // }).then((two) => {
+    //     console.log(two);
+    //     return 'three';
+    // }).then((three) => {
+    //     console.log(three);
+    // });
+
+    // fetch('https://api.github.com/users').then( response => {
+    //     response.json().then( users => {
+    //         users.forEach( user => {
+    //             // do something with each user object...
+    //             console.log(user.login);
+    //         });
+    //     });
+    // });
+    // const reviewObj = {
+    //     restaurant_id: 1,
+    //     name: 'Codey',
+    //     rating: 5,
+    //     comments: "This is a really good place for coding and eating"
+    //
+    // };
+    //
+    // fetch('https://api.github.com/users').then( response => {
+    //     response.json().then( users => {
+    //         users.forEach(user => {
+    //             console.log(user.login);
+    //
+    //         })
+    //     });
+    // });
+
+    // function makeRequest() {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             if (Math.random() > 10.1) {
+    //                 resolve('Here is your data: ...');
+    //             } else {
+    //                 reject('Network Connection Error!');
+    //             }
+    //         }, 1500);
+    //     });
+    // }
+    //
+    // const request = makeRequest();
+    // console.log(request); // pending promise
+    // request.then(message => console.log('Promise resolved!', message));
+    // // if resolved, will log "Promise resolved!" and "Here is your data: ..."
+    // request.catch(message => console.log('Promise rejected!', message));
+    // // if rejected, will log "Promise rejected!" and "Network Connection Error!"
+
+    // const blogPost = {title: 'Ajax Requests', body: 'Are a fun way to use JS!'};
+    // const url = '/posts';
+    // const options = {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(blogPost),
+    // };
+    // fetch(url, options)
+    //     .then(/* post was created successfully */)
+    //     .catch(/* handle errors */);
+
+
+
+
+    // const reviewObj = {
+    //     restaurant_id: 1,
+    //     name: 'Laters',
+    //     rating: 3,
+    //     comments: "This is a really good place for coding and eating"
+    // };
+    // const url = 'https://codeup-restful-example.glitch.me/reviews';
+    // fetch(url).then(response=>{
+    //     response.json().then(reviews=>{
+    //         reviews.forEach(review =>{
+    //             console.log(review)
+    //         })
+    //         }
+    //     )
+    // })
+    // const options = {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(reviewObj),
+    // };
+    // fetch(url, options)
+    //     .then( response => console.log(response) ) /* review was created successfully */
+    //     .catch( error => console.error(error) ); /* handle errors */
 
 
 </script>
