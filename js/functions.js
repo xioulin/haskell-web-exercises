@@ -24,6 +24,7 @@ function sayHello(name){
         return("hello, "+name)
 }
 console.log(sayHello());
+console.log("me me me")
 
 /**
  * TODO:
