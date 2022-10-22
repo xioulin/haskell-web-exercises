@@ -26,6 +26,7 @@ function sayHello(name){
 console.log(sayHello());
 console.log("me me me");
 console.log(sayHello())
+console.log(discPerc)
 
 /**
  * TODO:
@@ -45,7 +46,7 @@ console.log(helloMessage);
 
 var myName = "Peter"
 sayHello(myName);
-console.log();
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 
@@ -107,6 +108,7 @@ let billTotal = prompt("what is the the bill total?")
      return "$"+billTotalinInteger;
 }
 console.log(calculateTip())
+console.log("hello")
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
