@@ -61,56 +61,71 @@ switch(pizzaPreference) {
  * name as input. This function should return a message which relates to the
  * color stated in the argument of the function. For colors you do not have
  * responses written for, return a string stating so
- *
- * Example:
- *  > analyzeColor('blue') // returns "blue is the color of the sky"
- *  > analyzeColor('red') // returns "Strawberries are red"
- *
- *
- *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
- *
- * You should use an if-else-if-else block to return different messages.
- *
- * Test your function by passing various string literals to it and
- * console.logging the function's return value
- */
-
-var favColor = prompt("what is your favorite color").toLowerCase();
-
-    if (favColor === "blue") {
-        prompt("why is the sky blue");
-        alert("because God loves the infantry");
-    } else if(favColor === "red"){
-        alert("roses are red")
-    } else{
-        alert(favColor+" is a bad choice");
-    }
-
-
-
-
+ *//* Example:
+*  > analyzeColor('blue') // returns "blue is the color of the sky"
+*  > analyzeColor('red') // returns "Strawberries are red"
+*
+*
+*  > analyzeColor('cyan') // returns "I don't know anything about cyan"
+*
+* You should use an if-else-if-else block to return different messages.
+*
+* Test your function by passing various string literals to it and
+* console.logging the function's return value
+*/
+// function analyzeColor(input) {
+//     var input1 = input.toLowerCase();
+//     if (input === "blue") {
+//         return input + " is my favorite color!!"
+//     } else if (input1 === "red") {
+//         return input + " is not my favorite color"
+//     } else {
+//         return "I have no opinion on " + input;
+//     }
+// }
+// let color = prompt("what is your favorite color")
+// alert(analyzeColor(color))
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
- var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
- var randomColor = colors[Math.floor(Math.random() * colors.length)];
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+// for(let i =0; i<colors.length;i++){
+//     console.log((colors[i]))
+// }
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
 
-
-
-
+// console.log(analyzeColor(randomColor))
 
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+
+
+// switch(randomColor) {
+//     case "blue":
+//         console.log("the color generated is "+randomColor);
+//         alert("blue is my favorite color!!");
+//         break;
+//     case "red":
+//         console.log("the color generated is "+randomColor);
+//         alert("red is not my favorite color");
+//         break;
+//     default:
+//         console.log("the color generated is "+randomColor);
+//         alert("I have no opinion on " + randomColor);
+//         break;
+// }
 
 /**
  * TODO:
@@ -118,17 +133,12 @@ var favColor = prompt("what is your favorite color").toLowerCase();
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-// var ucolor = prompt("fav color").toLowerCase();
-//
-// function analyzeColor(color){
-//     switch(color){
-//         case"blue";
-//             return"blueberries are sweet"
-//         case"red"
-//             return"it's been a good year for the roses"
-//         default:
-//             return"I'm colorblind"
-//     }}
+
+
+// var ucolor = prompt("what is your fav color?").toLowerCase();
+// let endResult = analyzeColor(ucolor);
+// alert(endResult)
+
 
 /* ########################################################################## */
 
@@ -151,6 +161,42 @@ var favColor = prompt("what is your favorite color").toLowerCase();
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+let walMartBill = prompt("enter how much your wal mart purchase is worth ");
+let luckyNumber = Math.floor(Math.random()*6);
+alert("Your random generated lucky number is "+luckyNumber);
+switch(luckyNumber){
+    case 0:
+        alert("your discount is 0");
+        alert("your total is still $"+walMartBill);
+        break
+    case 1:
+        alert("your discount is 10%");
+        let total =walMartBill-(walMartBill*.1);
+        alert("your total is $"+total);
+        break
+    case 2:
+        alert("your discount is 25%");
+        let total1 = walMartBill-(walMartBill*.25)
+        alert("your total is $"+total1);
+        break;
+    case 3:
+        alert("your discount is 35%");
+        let total2 = walMartBill-(walMartBill*.35)
+        alert("your total is $"+total2);
+        break;
+    case 4:
+        alert("your discount is 50%");
+        let total3 = walMartBill-(walMartBill*.5)
+        alert("your total is $"+total3);
+        break;
+    case 5:
+        alert("your discount is 100!!!");
+        alert("your total is $0!!");
+        break;
+}
+
+
 
 /**
  * TODO:
