@@ -161,43 +161,6 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
-let walMartBill = prompt("enter how much your wal mart purchase is worth ");
-let luckyNumber = Math.floor(Math.random()*6);
-alert("Your random generated lucky number is "+luckyNumber);
-switch(luckyNumber){
-    case 0:
-        alert("your discount is 0");
-        alert("your total is still $"+walMartBill);
-        break
-    case 1:
-        alert("your discount is 10%");
-        let total =walMartBill-(walMartBill*.1);
-        alert("your total is $"+total);
-        break
-    case 2:
-        alert("your discount is 25%");
-        let total1 = walMartBill-(walMartBill*.25)
-        alert("your total is $"+total1);
-        break;
-    case 3:
-        alert("your discount is 35%");
-        let total2 = walMartBill-(walMartBill*.35)
-        alert("your total is $"+total2);
-        break;
-    case 4:
-        alert("your discount is 50%");
-        let total3 = walMartBill-(walMartBill*.5)
-        alert("your total is $"+total3);
-        break;
-    case 5:
-        alert("your discount is 100!!!");
-        alert("your total is $0!!");
-        break;
-}
-
-
-
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -206,15 +169,71 @@ switch(luckyNumber){
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+// let walMartBill = prompt("enter how much your wal mart purchase is worth ");
+// let luckyNumber = Math.floor(Math.random()*6);
+// alert("Your random generated lucky number is "+luckyNumber);
+// switch(luckyNumber){
+//     case 0:
+//         alert("your discount is 0");
+//         alert("your total is still $"+walMartBill);
+//         break
+//     case 1:
+//         alert("your discount is 10%");
+//         let total =walMartBill-(walMartBill*.1);
+//         alert("your total is $"+total);
+//         break
+//     case 2:
+//         alert("your discount is 25%");
+//         let total1 = walMartBill-(walMartBill*.25)
+//         alert("your total is $"+total1);
+//         break;
+//     case 3:
+//         alert("your discount is 35%");
+//         let total2 = walMartBill-(walMartBill*.35)
+//         alert("your total is $"+total2);
+//         break;
+//     case 4:
+//         alert("your discount is 50%");
+//         let total3 = walMartBill-(walMartBill*.5)
+//         alert("your total is $"+total3);
+//         break;
+//     case 5:
+//         alert("your discount is 100!!!");
+//         alert("your total is $0!!");
+//         break;
+// }
+
 
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
  * would like to enter a number. If they click 'Ok', prompt the user for a
  * number, then use 3 separate alerts to tell the user:
- *
+ */
+let askUser = confirm("would you like to enter a number?");
+if (askUser === true) {
+    let userNum = prompt("enter a number");
+    if(typeof parseInt(userNum)!=="number"){
+        alert("you didn't enter a number")
+    }else {
+        let userNumToInt = parseInt(userNum) + 100;
+        alert("when we add 100 it's  " + userNumToInt)
+        if (userNumToInt % 2 === 0) {
+            alert(userNumToInt + " is even")
+        }
+        if (userNumToInt % 2 === 1) {
+            alert(userNumToInt + " is odd")
+        }
+        if (userNumToInt < 0) {
+            alert(userNumToInt + "is negative")
+        }
+        if (userNumToInt >= 0) {
+            alert(userNumToInt + " is positive")
+        }
+    }
+}
+
+/*
  * - whether the number is even or odd
  * - what the number plus 100 is
  * - if the number is negative or positive
