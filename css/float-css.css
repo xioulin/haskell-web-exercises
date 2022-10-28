@@ -7,27 +7,29 @@
     align-items: baseline;
     /*display: flex;*/
     /*flex-direction: column;*/
+    /*float: left;*/
 }
 
 #box1 {
     background-color: #77AF00; /* greenish */
     height: 100px;
     width: 100px;
-    /*margin: 10px;*/
-    2
-    margin: auto;
-    float: top;
-    top: 3px;
+    margin: 10px;
+    float: right;
+    /*margin: auto;*/
+    /*float: top;*/
+    /*top: 3px;*/
 
 }
 #box2 {
     background-color: #1969B2; /* blueish */
-    height: 120px;
+    height: 150px;
     width: 150px;
-    /*margin: 10px;*/
-    float: bottom;
+    margin: 10px;
+    float: left;
+    /*float: bottom;*/
 
 }
 p{
-
+    clear:both;
 }
