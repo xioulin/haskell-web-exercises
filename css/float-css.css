@@ -5,6 +5,7 @@
     border: 1px solid #000;
     padding: 10px;
     align-items: baseline;
+    position:relative;
     /*display: flex;*/
     /*flex-direction: column;*/
     /*float: left;*/
@@ -15,7 +16,7 @@
     height: 100px;
     width: 100px;
     margin: 10px;
-    float: right;
+    /*float: right;*/
     /*margin: auto;*/
     /*float: top;*/
     /*top: 3px;*/
@@ -26,7 +27,9 @@
     height: 150px;
     width: 150px;
     margin: 10px;
-    float: left;
+    /*float: left;*/
+    position: fixed;
+
     /*float: bottom;*/
 
 }
