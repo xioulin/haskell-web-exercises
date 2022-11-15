@@ -35,53 +35,52 @@
     'use strict';
     // the listener function changes the text of the heading h1 to jscript is cool and will change the text when
     // the button is pressed.
-    var listener = function (event) {
-        // alert('You changed the first heading!');
-        var mainHeader = document.getElementById('main-header');
-        mainHeader.innerHTML = "JavaScript is Cool";
-    }
-    var btn1 = document.getElementById('btn1');
-    btn1.addEventListener('click', listener);
+    //     var listener = function (event) {
+    //         // alert('You changed the first heading!');
+    //         var mainHeader = document.getElementById('main-header');
+    //         mainHeader.innerHTML = "JavaScript is Cool";
+    //     }
+    //     var btn1 = document.getElementById('btn1');
+    //     btn1.addEventListener('click', listener);
+    //
+    //
+    //     //the blueing function will change the subheading to a blue font when the second button is pressed.
+    //     var blueing = function(event){
+    //         var subHeader = document.getElementById('sub-header');
+    //         subHeader.style.color = '#0000FF';
+    //     }
+    //     var btn2 = document.getElementById('btn2');
+    //     btn2.addEventListener('click', blueing);
+    //
+    //
+    // // this function will turn every other list item to a gray font color
+    //     var fiftyShades = function(event) {
+    //         var listItems = document.getElementsByTagName('li');
+    //         for (var i = 0; i < listItems.length; i += 2) {
+    //             listItems[i].style.color = '#808080';
+    //         }
+    //     }
+    //     var btn3 = document.getElementById('btn3');
+    //         btn3.addEventListener('click',fiftyShades);
+    //
+    //     var changePar = function(event){
+    //         var subParagraphs = document.getElementsByClassName('sub-paragraph');
+    //         subParagraphs[0].innerHTML = "Mission Accomplished";
+    //     }
+    //     var btn4 = document.getElementById('btn4');
+    //     btn4.addEventListener('click',changePar);
+    //     // var remover = function (event) {
+    //     //     // remove event listener from btn1
+    //     //     btn1.removeEventListener('click', listener);
+    //     //     console.log('Event listener removed.');
+    //
+    //     // add event listener to btn2-->
+    //     //      var btn2 = document.getElementById('btn2');
+    //     //               btn2.addEventListener('click', remover);
 
 
-    //the blueing function will change the subheading to a blue font when the second button is pressed.
-    var blueing = function(event){
-        var subHeader = document.getElementById('sub-header');
-        subHeader.style.color = '#0000FF';
-    }
-    var btn2 = document.getElementById('btn2');
-    btn2.addEventListener('click', blueing);
-
-
-// this function will turn every other list item to a gray font color
-    var fiftyShades = function(event) {
-        var listItems = document.getElementsByTagName('li');
-        for (var i = 0; i < listItems.length; i += 2) {
-            listItems[i].style.color = '#808080';
-        }
-    }
-    var btn3 = document.getElementById('btn3');
-        btn3.addEventListener('click',fiftyShades);
-
-    var changePar = function(event){
-        var subParagraphs = document.getElementsByClassName('sub-paragraph');
-        subParagraphs[0].innerHTML = "Mission Accomplished";
-    }
-    var btn4 = document.getElementById('btn4');
-    btn4.addEventListener('click',changePar);
-    // var remover = function (event) {
-    //     // remove event listener from btn1
-    //     btn1.removeEventListener('click', listener);
-    //     console.log('Event listener removed.');
-
-    // add event listener to btn2-->
-    //      var btn2 = document.getElementById('btn2');
-    //               btn2.addEventListener('click', remover);
-
-
-
-    // (function () {
-    //     "use strict";
+    (function () {
+        //     "use strict";
         // TODO: Uncomment next line and get the main header element by id
         // var mainHeader = document.getElementById('main-header');
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
@@ -91,19 +90,56 @@
         // // TODO: Set the text color of subHeader to blue
         // subHeader.style.color = '#0000FF';
         // TODO: Uncomment the next line and get all list items
-        // var listItems = document.getElementsByTagName('li');
+        var listItems = document.getElementsByTagName('li');
         // // TODO: Set text color on every other list item to grey
         // for (var i = 0; i < listItems.length; i += 2) {
         //     listItems[i].style.color = '#808080';
         // }
         // TODO: Set text color of li with dbid = 1 to blue
-        // listItems[0].style.color = "#0000FF";
+        listItems[0].style.color = "#0000FF";
         // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         // var subParagraphs = document.getElementsByClassName('sub-paragraph');
         // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         // subParagraphs[0].innerHTML = "Mission Accomplished";
 
-    // })();
+        function changeLastPara(){
+            var subParagraphs = document.getElementsByClassName('sub-paragraph');
+            subParagraphs[0].innerHTML = "mission acccomplished"
+        }
+        var btn4 = document.getElementById("btn4");
+        btn4.addEventListener("click", changeLastPara);
+
+
+        function changeHeader() {
+            var mainHeader = document.getElementById("main-header");
+            mainHeader.innerHTML = "JS is tots cool";
+        }
+
+        var btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", changeHeader);
+
+        function makeHeaderBlue() {
+            var mainHeader = document.getElementById("sub-header");
+            mainHeader.style.color = '#0000FF';
+        }
+
+        var btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click", makeHeaderBlue);
+
+        function makeFontsGrey() {
+            var listItems = document.getElementsByTagName("li");
+            for (var i = 0; i < listItems.length; i += 2) {
+                listItems[i].style.color = '#808080';
+            }
+        }
+
+        var btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click", makeFontsGrey);
+
+
+        // .addEventListener("click", )
+
+    })();
 </script>
 </body>
 </html>

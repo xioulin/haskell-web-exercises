@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
+<h2 id="message">This BOM will self destruct in <span id="timer">25</span> seconds...</h2>
 <button id="defuser">Defuse the BOM</button>
 
 <script>
@@ -16,17 +16,18 @@
     // when count >= max, the interval is cancelled, and the logging will stop
 
     var count = 0;
-    var max = 10;
+    var max = 25;
     var interval = 1000; // interval time in milliseconds
-    // var intervalId = setInterval(function () {
-    //     if (count >= max) {
-    //         clearInterval(intervalId);
-    //         console.log('All done');
-    //     } else {
-    //         count++;
-    //         console.log('Repeating this line ' + count);
-    //     }
-    // }, interval);
+    var intervalId = setInterval(function () {
+        if (count >= max) {
+            clearInterval(intervalId);
+            console.log('All done');
+        } else {
+            count++;
+            console.log('Repeating this line ' + count);
+        }
+    }, interval);
+
 (function() {
     "use strict";
     var detonationTimer = 5;
