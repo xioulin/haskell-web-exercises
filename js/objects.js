@@ -1,83 +1,37 @@
-
-(function() {
+(function () {
     "use strict";
 
-    var cars = [
-        {
-            make: "Toyota",
-            model: "Camry",
-            features: ["Automatic Windows", "Bluetooth Connectivity", "GPS Navigation"],
-            owner: {
-                name: "Jane Doe",
-                age: 30
-            }
-        },
-        {
-            make: "Honda",
-            model: "Accord",
-            features: ["Automatic Windows", "Great Gas Mileage", "AM/FM Radio"],
-            owner: {
-                name: "John Doe",
-                age: 31
-            }
-        }
-    ];
+    var aaronRodgers = {};
 
-    console.log("The first car is a " + cars[0].make + " " + cars[0].model + ".");
-    console.log("The owner of the second car is " + cars[1].owner.name + ".");
+    aaronRodgers.firstName = "Aaron";
+    aaronRodgers.lastName = "Rodgers";
+    aaronRodgers.position = "quarterback";
+    aaronRodgers.height = "6'2";
+    aaronRodgers.age = 39;
+    aaronRodgers.numberOfMvpAwards = 4;
+    console.log(aaronRodgers.firstName, aaronRodgers.lastName);
+    console.log(aaronRodgers);
 
-    console.log("Here are all the features of all the cars:");
-    cars.forEach(function(car) {
-        car.features.forEach(function(feature) {
-            console.log(feature);
-        });
-    });
-
-
-    // var car = new Object();
-    // console.log(typeof car);
-    //
-    // var users = {
-    //     firstName: "dominic",
-    //     lastName: "torretto",
-    //     occupation: "family",
-    //     body: {
-    //         height: "66",
-    //         weight: "215",
-    //         hair: "bald",
-    //
-    //     }},
-    // {
-    //     firstName: "paul",
-    //     lastName: "walker",
-    //     occupation: "family"
-    //     body: {
-    //         height: "69",
-    //         weight: "195",
-    //         hair: "blonde",
-    //
+    // var cars = [
+    //     {
+    //         make: "Toyota",
+    //         model: "Camry",
+    //         features: ["Automatic Windows", "Bluetooth Connectivity", "GPS Navigation"],
+    //         owner: {
+    //             name: "Jane Doe",
+    //             age: 30
+    //         }
     //     },
-    // }
-   // console.log("you're first name is "+user.firstName);
-
-   //  user.age= 49
-   // //
-   // // alert(`${user.firstName} ${user.lastName} how are you??`)
-   //
-   //  console.log(user.firstName);
-
-
-    // console.log(typeof user);
-    //
-    // var name = "peter"
-    // console.log(typeof name); //returns string
-    //
-    // var planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus', 'Neptune'];
-    // console.log(typeof planets); //returns object
-    //
-    //
-// "object"
-
+    //     {
+    //         make: "Honda",
+    //         model: "Accord",
+    //         features: ["Automatic Windows", "Great Gas Mileage", "AM/FM Radio"],
+    //         owner: {
+    //             name: "John Doe",
+    //             age: 31
+    //         }
+    //     }
+    // ];
     /**
      * TODO:
      * Create an object with firstName and lastName properties that are strings
@@ -88,20 +42,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-
-    // var person={
-    //     firstName: "Piotr",
-    //     lastName:  "Chomicki"
-    // }
-    //     console.log("My name is "+person.firstName);
-    //     console.log("My family name is " +person.lastName);
-
-        // person.eat = function(){
-        //     alert("pierogies");
-        // };
-        // console.log(person.eat());
-
-        /**
+    var person = {};
+    person.firstName = "Morty";
+    person.lastName = "Seinfeld";
+    console.log(person.firstName);
+    console.log(person.lastName);
+    /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
      * the firstName and lastName properties.
@@ -110,13 +56,10 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-
-    // person.sayHello = function(){
-    //     return ("Hello from ")+person.firstName+" "+person.lastName+"!";
-    //     }
-    // console.log(person.sayHello());
-
-
+    person.sayHello = function () {
+        return ("hello to " + person.firstName + person.lastName);
+    }
+    console.log(person.sayHello());
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -131,8 +74,8 @@
      * and console.log the relevant messages for each person
      */
 
-        // 1. HEB offers discount for purchases over $200.
-        //2. If payer buys more than $200 worth, a 12% discount applies to the total purchse
+    // 1. HEB offers discount for purchases over $200.
+    //2. If payer buys more than $200 worth, a 12% discount applies to the total purchse
 
     // var shoppers = [
     //     {name: 'Cameron', amount: 180},
@@ -172,46 +115,38 @@
 
     var books = [
         {
-            title:"The Grapes of Wrath",
-            author:{
-                firstName: "John",
-                lastName: "Steinbeck"
-            },
-        },
-        {
-            title:"The Great Gatsby",
-            author:{
-                firstName:"F.Scott",
-                lastName: "Fitzgerald"
-            }
-        },
-
-        {
-            title:"Pride and Prejudice",
-            author:{
-                firstName:"Jane",
-                lastName: "Austen"
-            }
-        },
-        {
-            title:"Moby Dick",
-            author:{
-                firstName:"Hermann",
+            title: "Moby Dick",
+            author: {
+                firstName: "Herman",
                 lastName: "Melville"
             }
-        },
-        {
-            title:"The Shining",
-            author:{
-                firstName:"Stephen",
-                lastName: "King"
+        }, {
+            title: "50 Shades of Grey",
+            author: {
+                firstName: "E.L.",
+                lastName: "James"
+            }
+        }, {
+            title: "The Great Gatsby",
+            author: {
+                firstName: "F.Scott",
+                lastName: "Fitzgerald"
+            }
+        }, {
+            title: "Old Man and the Sea",
+            author: {
+                firstName: "Ernest",
+                lastName: "Hemingway"
+            }
+        }, {
+            title: "Pride and Prejudice",
+            author: {
+                firstName: "Jane",
+                lastName: "Austen"
             }
         }
-    ];
-    //
-    // console.log(books[4].title);
-
-
+    ]
+    console.log(books[0].author);
 
     /**
      * TODO:
@@ -238,11 +173,11 @@
      *      ...
      */
 
-    books.forEach(function(book,index){
-        console.log(`Book # ${index+1}`);
-        console.log(`Title: ${book.title}`);
-        console.log(`Author: ${book.author.firstName}${book.author.lastName}`);
-    })
+    // books.forEach(function(book,index){
+    //     console.log(`Book # ${index+1}`);
+    //     console.log(`Title: ${book.title}`);
+    //     console.log(`Author: ${book.author.firstName}${book.author.lastName}`);
+    // })
 
     /**
      * Bonus:
@@ -255,7 +190,8 @@
      *   `showBookInfo` function.
      */
     var books = [];
-    function createBook(title,author){
+
+    function createBook(title, author) {
         var book = {
             title: title,
             author: author
@@ -263,19 +199,20 @@
         books.push(book);
         return book;
     }
-    console.log(books);
-    console.log(createBook("My Book","myAuthor"));
-    console.log(books);
 
-    function showBookInfo(book){
-        console.log(`Book # ${index+1}`);
-        console.log(`Title: ${book.title}`);
-        console.log(`Author: ${book.author.firstName}${book.author.lastName}`);
-        console.log("---")
-    }
-    books.forEach(function (book,index){
+    // console.log(books);
+    // console.log(createBook("My Book","myAuthor"));
+    // console.log(books);
 
-        showBookInfo(book);
-    })
-    console.log(showBookInfo(book));
+    // function showBookInfo(book){
+    //     console.log(`Book # ${index+1}`);
+    //     console.log(`Title: ${book.title}`);
+    //     console.log(`Author: ${book.author.firstName}${book.author.lastName}`);
+    //     console.log("---")
+    // }
+    // books.forEach(function (book,index){
+    //
+    //     showBookInfo(book);
+    // })
+    // console.log(showBookInfo(book));
 })();
