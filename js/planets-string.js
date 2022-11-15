@@ -10,14 +10,21 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-    console.log(planetsString);
-    var planetsArray = planetsString.split('|');
-    console.log(planetsArray);
 
+    var planetsArray = planetsString.split('|')
+    console.log(planetsArray);
     /**
      * TODO:
      * Create a string with <br> tags between each planet. console.log() your
      * results. Why might this be useful?
+     */
+
+    var planetsArrayString = planetsArray.join("<br>");
+    console.log(planetsArrayString);
+
+     /**
+     *
+     *
      *
      * BONUS:
      * Create another string that would display your planets in an undordered
@@ -25,12 +32,12 @@
      * string, and <li> tags around each planet.
      */
 
-    console.log(planetsString.replaceAll('|',"<br>"));
-
-    //Bonus
-    planetsArray.push("</ul>");
-    planetsArray.unshift("<ul>");
-    var planetList = planetsArray.join("<li>");
-    console.log(planetList);
+    // console.log(planetsString.replaceAll('|',"<br>"));
+    //
+    // //Bonus
+    // planetsArray.push("</ul>");
+    // planetsArray.unshift("<ul>");
+    // var planetList = planetsArray.join("<li>");
+    // console.log(planetList);
 
 })();
