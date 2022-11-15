@@ -74,39 +74,26 @@
      * and console.log the relevant messages for each person
      */
 
-    // 1. HEB offers discount for purchases over $200.
-    //2. If payer buys more than $200 worth, a 12% discount applies to the total purchse
+    var shoppers = [
+        {name: 'Ryan', amount: 250},
+        {name: 'Cameron', amount: 180},
+        {name: 'George', amount: 320}
+    ];
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320},
-    //
-    // ];
-    //need to call on each individual shopper and their purchase amount.
-    // need to apply a conditional where 12% is applied to amounts over $200
-
-
-    // shoppers.forEach(function(shopper){
-    //     console.log(shopper.amount);
-    //     if(shopper.amount>200){
-    //         shopper.amount -= shopper.amount*.12
-    //
-    //     }
-    //
-    //     var discountAmount = shopper.amount*.12;
-    //
-    //     console.log(shopper.name + " saved $"+discountAmount.toFixed(2)+" and "+shopper.name+"'s new total is "+shopper.amount+"!");
-    // })
-
-
+    for(var i = 0; i<shoppers.length; i++){
+        if(shoppers[i].amount>=200){
+            console.log(shoppers[i].name+" yay is fabulous and will get a 12% discount which is $ ");
+            console.log(shoppers[i].amount*.12+shoppers[i].amount);
+        }else if(shoppers[i].amount<200){
+            console.log(shoppers[i].name+" is a loser and needs to get with the program")
+        }
+    }
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
      * property. The author property should be an object with properties
      * `firstName` and `lastName`. Be creative and add at least 5 books to the
      * array
-     *
      * Example:
      * > console.log(books[0].title) // "The Salmon of Doubt"
      * > console.log(books[0].author.firstName) // "Douglas"
@@ -146,7 +133,6 @@
             }
         }
     ]
-    console.log(books[0].author);
 
     /**
      * TODO:
@@ -173,11 +159,13 @@
      *      ...
      */
 
-    // books.forEach(function(book,index){
-    //     console.log(`Book # ${index+1}`);
-    //     console.log(`Title: ${book.title}`);
-    //     console.log(`Author: ${book.author.firstName}${book.author.lastName}`);
-    // })
+    for(var i = 0; i<books.length; i++){
+        console.log("Book #"+(i+1)+" title is "+books[i].title)
+        console.log("Author is "+books[i].author.firstName+" "+books[i].author.lastName)
+    }
+
+
+
 
     /**
      * Bonus:
@@ -189,16 +177,29 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    var books = [];
 
-    function createBook(title, author) {
-        var book = {
-            title: title,
-            author: author
-        };
-        books.push(book);
-        return book;
+    var book ={};
+    function createBook(title,author){
+        book.title = title;
+        book.author = author;
     }
+
+    createBook("Gone With the Wind","Margaret Mitchell");
+    console.log(book);
+
+    function showBookInfo(book){
+        return "The book title is "+book.title+" and the book author is "+book.author;
+    }
+    console.log(showBookInfo(book))
+
+    // function createBook(title, author) {
+    //     var book = {
+    //         title: title,
+    //         author: author
+    //     };
+    //     books.push(book);
+    //     return book;
+    // }
 
     // console.log(books);
     // console.log(createBook("My Book","myAuthor"));
